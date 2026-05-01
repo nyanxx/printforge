@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat_Alternates, Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import { Analytics } from "@vercel/analytics/next"
 
 const montserratAlternates = Montserrat_Alternates({
   variable: "--font-montserrat-alternates",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-albert min-w-75">
         <Header />
         <main className="w-full h-full max-w-7xl mx-auto">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
